@@ -227,9 +227,9 @@ namespace TrimmR
                 timeDest.Add(skipField.Text.Substring(i, 2));
             }
             //skip to forward then traverse to bookmark spot
+            pausebtnclick(new object(), new EventArgs());
             player.SeekAccurate(0);
             skipTo(int.Parse(timeDest[0] + timeDest[1] + timeDest[2] + "000"));
-            pausebtnclick(new object(), new EventArgs());
             skipField.Text = "hh:mm:ss";
             return;
         }

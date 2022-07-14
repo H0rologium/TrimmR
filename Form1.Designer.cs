@@ -456,7 +456,8 @@ namespace TrimmR
         {
             if (!player.CanPlay) return;
             if (player.IsPlaying) pausebtnclick(new object(), new EventArgs());
-            player.Seek(millisAmountToSkipBy,forwards);
+            Thread.Sleep(300);
+            player.Seek(millisAmountToSkipBy*1000,forwards);
             return;
         }
         #endregion
